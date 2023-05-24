@@ -1,6 +1,9 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
+	"github.com/gin-gonic/gin"
+)
 
 // CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build main.go
 func main() {
@@ -13,6 +16,7 @@ func main() {
 			"msg":  "hello from cicd-demo!",
 		})
 	})
+	fmt.Print()
 
 	engine.Run(":9088")
 
